@@ -1,0 +1,17 @@
+{
+  "name": "droppables",
+  "description": "droppables",
+  "main": "droppables.js",
+  "license": "ISC",
+  "homepage": "https://actarian.github.io/droppables/",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+  }
+}

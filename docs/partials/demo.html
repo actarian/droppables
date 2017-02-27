@@ -1,0 +1,29 @@
+
+<style>
+    .draggable {
+        display: block;
+        height: 80px;
+        min-width: 200px;
+        line-height: 80px;
+        font-size: 12px;
+        font-family: Arial;
+        float: left;
+        padding: 0 10px;
+        border: 1px solid #eee;
+    }
+
+    [draggable-item] + [draggable-item] {
+        margin-left: 5px;
+    }
+
+</style>
+<main>
+
+    <!-- DROPPABLES -->
+    <div ng-repeat="item in items track by $index" ng-model="item" droppable-item=".draggable" droppable-index="$index" draggable-item=".draggable" draggable-if="true" droppable-if="true">
+        <div class="draggable">
+            <span ng-bind="item.name"></span>
+        </div>
+    </div>
+
+</main>
