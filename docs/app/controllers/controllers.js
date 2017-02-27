@@ -12,5 +12,16 @@ app.controller('DemoCtrl', ['$scope', '$http', function ($scope, $http) {
     }, function(response) {
         console.log('error', response);
     });
+    
+    $scope.$on('onDropItem', function (scope, event) {
+        var fromIndex = $scope.items.indexOf(event.from.model);
+        var toIndex = $scope.items.indexOf(event.to.model);
+        var item = $scope.items[fromIndex];
+        $scope.items.splice(fromIndex, 1);
+        $scope.items.splice(toIndex, 0, item);
+    });
+    $scope.$on('onDropOut', function (scope, event) {
+        // console.log('NegotiationReportCtrl.onDropOut', event.model, event.from, event.to, event.target);
+    });
 
 }]);

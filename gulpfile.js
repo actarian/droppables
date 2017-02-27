@@ -40,7 +40,7 @@ gulp.task('sass:compile', function() {
 	.pipe(sass().on('sass:compile.error', function (error) {
 		console.log('sass:compile:error', error);
 	}))
-	.pipe(rename('draggables.css'))
+	.pipe(rename('droppables.css'))
     .pipe(gulp.dest('./docs/css')) // save .css
 	// .pipe(autoprefixer({ browsers: browserlist })) // autoprefixer
 	.pipe(cssmin())
